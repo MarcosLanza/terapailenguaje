@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Sheyla Mora Méndez · Terapia del Lenguaje</title>
+<meta name="description" content="Terapia del lenguaje para niños, estimulación temprana, refuerzo en lectoescritura y acompañamiento terapéutico para adultos mayores en Ciudad Quesada, San Carlos. Atención en consultorio y a domicilio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lila:#b89ad8;
+    --lila-suave:#ece3f7;
+    --lila-fuerte:#7b58a8;
+    --rosa:#ef9fd3;
+    --rosa-suave:#fde6f3;
+    --amarillo:#fde89c;
+    --amarillo-suave:#fff7da;
+    --crema:#f8f6fb;
+    --blanco:#ffffff;
+    --texto:#2d2934;
+    --texto-suave:#625b6e;
+    --borde:#e6dff0;
+    --whatsapp:#25d366;
+    --radio:22px;
+    --sombra:0 10px 30px rgba(123,88,168,.12);
+    --max:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Nunito",system-ui,sans-serif;color:var(--texto);background:var(--crema);line-height:1.6;font-size:17px;overflow-x:hidden}
+  h1,h2,h3{font-family:"Fredoka",sans-serif;line-height:1.15;color:var(--texto)}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .contenedor{width:100%;max-width:var(--max);margin:0 auto;padding:0 16px}
+  .seccion{padding:80px 0;position:relative}
+  .etiqueta{display:inline-block;font-family:"Fredoka",sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--lila-fuerte);background:var(--lila-suave);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+  .titulo-seccion{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+  .intro-seccion{color:var(--texto-suave);max-width:620px;margin-bottom:40px}
+  .centrado{text-align:center}
+  .centrado .intro-seccion{margin-left:auto;margin-right:auto}
+
+  /* Botones */
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:"Fredoka",sans-serif;font-weight:600;font-size:1.05rem;padding:14px 26px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-principal{background:var(--lila-fuerte);color:#fff;box-shadow:0 8px 20px rgba(123,88,168,.3)}
+  .btn-secundario{background:var(--amarillo);color:var(--texto)}
+  .btn-whatsapp{background:var(--whatsapp);color:#fff}
+  .btn svg{width:20px;height:20px;flex-shrink:0}
+
+  /* Navegación */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(248,246,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--borde)}
+  .nav .contenedor{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .marca-icono{width:40px;height:40px;border-radius:50%;background:var(--lila);display:grid;place-items:center;color:#fff;font-family:"Fredoka";font-weight:700}
+  .marca-texto{font-family:"Fredoka";font-weight:600;line-height:1.1}
+  .marca-texto small{display:block;font-family:"Nunito";font-weight:600;font-size:.75rem;color:var(--texto-suave)}
+  .menu{display:flex;gap:28px;list-style:none;align-items:center}
+  .menu a{text-decoration:none;font-weight:600;color:var(--texto-suave)}
+  .menu a:hover{color:var(--lila-fuerte)}
+  .menu .btn{padding:10px 20px;font-size:.95rem;color:#fff}
+  .menu-boton{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .menu-boton span{display:block;width:24px;height:2px;background:var(--texto);margin:5px 0;border-radius:2px}
+
+  /* Hero */
+  .hero{padding:60px 0 90px;overflow:hidden}
+  .hero .contenedor{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(2.3rem,6vw,3.8rem);margin-bottom:8px}
+  .hero h1 em{font-style:normal;color:var(--lila-fuerte)}
+  .hero-nombre{font-family:"Fredoka";font-weight:600;color:#d46fb0;font-size:1.25rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px}
+  .hero p.lead{font-size:1.15rem;color:var(--texto-suave);margin-bottom:28px;max-width:520px}
+  .hero-botones{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+  .credencial{display:inline-flex;align-items:center;gap:10px;background:var(--blanco);border:1px solid var(--borde);padding:10px 16px;border-radius:14px;font-size:.92rem;color:var(--texto-suave)}
+  .credencial strong{color:var(--texto)}
+  .hero-foto{position:relative;justify-self:center;width:min(420px,100%);aspect-ratio:1}
+  .hero-foto .circulo{position:absolute;inset:0;border-radius:50%;background:var(--lila)}
+  .hero-foto .marco{position:absolute;inset:6%;border-radius:50%;overflow:hidden;background:var(--lila-suave)}
+  .hero-foto img{width:100%;height:100%;object-fit:cover}
+  .placeholder-foto{width:100%;height:100%;display:grid;place-items:center;text-align:center;color:var(--lila-fuerte);font-family:"Fredoka";font-weight:600;padding:20px}
+  .placeholder-foto span{font-size:3.2rem;display:block}
+  .placeholder-foto small{font-family:"Nunito";font-weight:600;font-size:.85rem;color:var(--texto-suave)}
+  .burbuja{position:absolute;background:var(--blanco);border-radius:16px;padding:10px 14px;box-shadow:var(--sombra);font-weight:700;font-size:.9rem;display:flex;align-items:center;gap:8px}
+  .burbuja.b1{bottom:8%;left:-6%}
+  .burbuja.b2{top:10%;right:-4%}
+  .punto{width:10px;height:10px;border-radius:50%}
+  .ondas{position:absolute;width:160px;opacity:.9;pointer-events:none}
+  .ondas.o1{top:20px;left:-30px}
+  .ondas.o2{bottom:10px;right:-20px}
+
+  /* Servicios */
+  .servicios{background:var(--blanco)}
+  .grid-servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .tarjeta{background:var(--crema);border-radius:var(--radio);padding:28px 24px;border:1px solid var(--borde);transition:transform .2s ease, box-shadow .2s ease}
+  .tarjeta:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+  .tarjeta-icono{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.7rem;margin-bottom:18px}
+  .tarjeta h3{font-size:1.25rem;margin-bottom:10px}
+  .tarjeta p{color:var(--texto-suave);font-size:.95rem}
+  .tarjeta ul{margin-top:10px;padding-left:18px;color:var(--texto-suave);font-size:.92rem}
+  .bg-lila{background:var(--lila-suave)}
+  .bg-rosa{background:var(--rosa-suave)}
+  .bg-amarillo{background:var(--amarillo-suave)}
+
+  /* Sobre mí */
+  .sobre .contenedor{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .sobre-foto{border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:var(--rosa-suave);position:relative}
+  .sobre-foto img{width:100%;height:100%;object-fit:cover}
+  .sobre p{color:var(--texto-suave);margin-bottom:16px}
+  .datos{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .dato{background:var(--blanco);border:1px solid var(--borde);border-radius:16px;padding:14px 18px;flex:1 1 160px}
+  .dato strong{display:block;font-family:"Fredoka";font-size:1.05rem;color:var(--lila-fuerte)}
+  .dato span{font-size:.9rem;color:var(--texto-suave)}
+
+  /* Modalidades */
+  .modalidades{background:var(--lila-suave)}
+  .grid-modalidades{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .modalidad{background:var(--blanco);border-radius:var(--radio);padding:32px;display:flex;gap:20px;align-items:flex-start}
+  .modalidad-icono{font-size:2.2rem;flex-shrink:0}
+  .modalidad h3{font-size:1.35rem;margin-bottom:6px}
+  .modalidad p{color:var(--texto-suave)}
+
+  /* Pasos */
+  .grid-pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:paso}
+  .paso{position:relative;padding:28px 24px 24px;background:var(--blanco);border-radius:var(--radio);border:1px solid var(--borde)}
+  .paso::before{counter-increment:paso;content:counter(paso);position:absolute;top:-18px;left:24px;width:40px;height:40px;border-radius:50%;background:var(--amarillo);display:grid;place-items:center;font-family:"Fredoka";font-weight:700;font-size:1.1rem}
+  .paso h3{font-size:1.15rem;margin:8px 0}
+  .paso p{color:var(--texto-suave);font-size:.95rem}
+
+  /* Agendar */
+  .agendar{background:var(--blanco)}
+  .agendar .contenedor{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+  .formulario{background:var(--crema);border:1px solid var(--borde);border-radius:28px;padding:32px}
+  .campos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .campo{display:flex;flex-direction:column;gap:6px}
+  .campo.completo{grid-column:1/-1}
+  label{font-weight:700;font-size:.92rem}
+  input,select,textarea{font:inherit;font-size:1rem;padding:12px 14px;border-radius:12px;border:1.5px solid var(--borde);background:var(--blanco);color:var(--texto);width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lila);box-shadow:0 0 0 4px var(--lila-suave)}
+  textarea{resize:vertical;min-height:90px}
+  .opciones{display:flex;gap:10px;flex-wrap:wrap}
+  .opcion{flex:1 1 140px}
+  .opcion input{position:absolute;opacity:0;pointer-events:none}
+  .opcion label{display:block;text-align:center;padding:12px;border-radius:12px;border:1.5px solid var(--borde);background:var(--blanco);cursor:pointer;font-weight:600}
+  .opcion input:checked + label{border-color:var(--lila-fuerte);background:var(--lila-suave);color:var(--lila-fuerte)}
+  .opcion input:focus-visible + label{box-shadow:0 0 0 4px var(--lila-suave)}
+  .nota{font-size:.85rem;color:var(--texto-suave);margin-top:14px}
+  .formulario .btn{width:100%;justify-content:center;margin-top:20px}
+  .lista-check{list-style:none;margin-top:20px}
+  .lista-check li{padding-left:32px;position:relative;margin-bottom:12px;color:var(--texto-suave)}
+  .lista-check li::before{content:"✓";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--rosa-suave);color:#c4559c;font-weight:800;display:grid;place-items:center;font-size:.8rem}
+
+  /* Contacto */
+  .grid-contacto{display:grid;grid-template-columns:1fr 1.2fr;gap:24px}
+  .info-contacto{display:flex;flex-direction:column;gap:14px}
+  .item-contacto{display:flex;gap:16px;align-items:center;background:var(--blanco);border:1px solid var(--borde);border-radius:18px;padding:18px 20px;text-decoration:none;transition:border-color .2s}
+  a.item-contacto:hover{border-color:var(--lila)}
+  .item-contacto .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;flex-shrink:0}
+  .item-contacto strong{display:block;font-family:"Fredoka";font-weight:600}
+  .item-contacto span{color:var(--texto-suave);font-size:.92rem;word-break:break-word}
+  .mapa{border-radius:var(--radio);overflow:hidden;min-height:340px;border:1px solid var(--borde);background:var(--lila-suave)}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  /* Footer */
+  footer{background:var(--texto);color:#d9d3e3;padding:40px 0 30px;text-align:center;font-size:.92rem}
+  footer strong{color:#fff;font-family:"Fredoka";font-size:1.1rem;display:block;margin-bottom:4px}
+  footer .redes{display:flex;justify-content:center;gap:12px;margin:18px 0}
+  footer .redes a{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;text-decoration:none}
+  footer .redes svg{width:20px;height:20px;fill:#fff}
+
+  /* WhatsApp flotante */
+  .wa-flotante{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--whatsapp);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:60;transition:transform .2s}
+  .wa-flotante:hover{transform:scale(1.08)}
+  .wa-flotante svg{width:32px;height:32px;fill:#fff}
+
+  /* Responsive */
+  @media (max-width:960px){
+    .grid-servicios{grid-template-columns:1fr 1fr}
+    .hero .contenedor,.sobre .contenedor,.agendar .contenedor,.grid-contacto{grid-template-columns:1fr}
+    .hero-foto{order:-1;width:min(320px,85%)}
+    .sobre-foto{max-width:380px}
+  }
+  @media (max-width:760px){
+    .menu{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;background:var(--crema);border-bottom:1px solid var(--borde);padding:8px 16px 16px}
+    .menu.abierto{display:flex}
+    .menu li{width:100%}
+    .menu a{display:block;padding:12px 0}
+    .menu .btn{justify-content:center;margin-top:8px}
+    .menu-boton{display:block}
+    .seccion{padding:60px 0}
+    .grid-modalidades,.grid-pasos{grid-template-columns:1fr}
+    .grid-pasos{gap:36px}
+    .burbuja.b1{left:0}
+    .burbuja.b2{right:0}
+  }
+  @media (max-width:560px){
+    .grid-servicios,.campos{grid-template-columns:1fr}
+    .formulario{padding:22px}
+    .hero-botones .btn{width:100%;justify-content:center}
+    .ondas{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAVEGACIÓN ================= -->
+<header class="nav">
+  <div class="contenedor">
+    <a href="#inicio" class="marca">
+      <div class="marca-icono">SM</div>
+      <div class="marca-texto">Dra. Sheyla Mora<small>Terapia del Lenguaje</small></div>
+    </a>
+    <button class="menu-boton" aria-label="Abrir menú" aria-expanded="false" id="menuBoton">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#modalidades">Dónde atiendo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#agendar" class="btn btn-principal">Agendar cita</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <svg class="ondas o1" viewBox="0 0 200 60" fill="none"><path d="M5 40 Q 30 5 55 40 T 105 40 T 155 40 T 205 40" stroke="#ef9fd3" stroke-width="12" stroke-linecap="round"/></svg>
+  <svg class="ondas o2" viewBox="0 0 200 60" fill="none"><path d="M5 40 Q 30 5 55 40 T 105 40 T 155 40 T 205 40" stroke="#ef9fd3" stroke-width="12" stroke-linecap="round"/></svg>
+  <div class="contenedor">
+    <div>
+      <span class="etiqueta">Ciudad Quesada · San Carlos</span>
+      <h1>Terapia del <em>Lenguaje</em></h1>
+      <p class="hero-nombre">Dra. Sheyla Mora Méndez</p>
+      <p class="lead">Acompaño a niños, niñas y adultos mayores a comunicarse con más confianza, con un trato cercano, paciente y lleno de juego. ¡Será un placer atenderte!</p>
+      <div class="hero-botones">
+        <a href="#agendar" class="btn btn-principal">Agendar una cita</a>
+        <a href="https://wa.me/50689638476?text=Hola%20Dra.%20Sheyla%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20terapia." target="_blank" rel="noopener" class="btn btn-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.3Z"/></svg>
+          Escribime por WhatsApp
+        </a>
+      </div>
+      <div class="credencial">🎓 <span>Terapeuta del Lenguaje y Estimuladora Infantil · <strong>Cód. CTCR-TL-1161</strong></span></div>
+    </div>
+
+    <div class="hero-foto">
+      <div class="circulo"></div>
+      <div class="marco">
+        <!-- Reemplazá img/sheyla-perfil.jpg por la foto de perfil -->
+        <img src="img/sheyla-perfil.jpg" alt="Dra. Sheyla Mora Méndez, terapeuta del lenguaje" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-foto',innerHTML:'<div><span>📷</span>Foto de perfil<br><small>img/sheyla-perfil.jpg</small></div>'}))">
+      </div>
+      <div class="burbuja b1"><span class="punto" style="background:var(--rosa)"></span>Consultorio y domicilio</div>
+      <div class="burbuja b2"><span class="punto" style="background:var(--amarillo)"></span>Niños y adultos mayores</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICIOS ================= -->
+<section class="seccion servicios" id="servicios">
+  <div class="contenedor">
+    <div class="centrado">
+      <span class="etiqueta">Servicios</span>
+      <h2 class="titulo-seccion">¿En qué te puedo ayudar?</h2>
+      <p class="intro-seccion">Cada proceso empieza con una valoración para conocer a la persona y diseñar un plan a su medida.</p>
+    </div>
+    <div class="grid-servicios">
+      <article class="tarjeta">
+        <div class="tarjeta-icono bg-lila">🗣️</div>
+        <h3>Terapia del lenguaje para niños</h3>
+        <p>Apoyo en pronunciación, vocabulario, comprensión y expresión para que tu peque se comunique con seguridad.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="tarjeta-icono bg-rosa">💜</div>
+        <h3>Acompañamiento a adultos mayores</h3>
+        <p>Trabajo integral para fortalecer la mente y el bienestar emocional.</p>
+        <ul>
+          <li>Estimulación cognitiva</li>
+          <li>Comunicación y lenguaje</li>
+          <li>Acompañamiento social y emocional</li>
+        </ul>
+      </article>
+      <article class="tarjeta">
+        <div class="tarjeta-icono bg-amarillo">🧸</div>
+        <h3>Estimulación temprana</h3>
+        <p>Pequeñas experiencias hoy, grandes logros mañana. Actividades para potenciar el desarrollo en los primeros años.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="tarjeta-icono bg-lila">✏️</div>
+        <h3>Refuerzo en lectura y escritura</h3>
+        <p>Acompañamiento escolar para mejorar la lectoescritura de forma dinámica y sin presión.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE MÍ ================= -->
+<section class="seccion sobre" id="sobre-mi">
+  <div class="contenedor">
+    <div class="sobre-foto">
+      <!-- Reemplazá img/sheyla-terapia.jpg por una foto en sesión -->
+      <img src="img/sheyla-terapia.jpg" alt="La Dra. Sheyla durante una sesión de terapia" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-foto',innerHTML:'<div><span>📷</span>Foto en sesión<br><small>img/sheyla-terapia.jpg</small></div>'}))">
+    </div>
+    <div>
+      <span class="etiqueta">Sobre mí</span>
+      <h2 class="titulo-seccion">Hola, soy Sheyla 👋</h2>
+      <!-- ✏️ Texto de ejemplo: que ella lo ajuste con su historia, formación y enfoque -->
+      <p>Soy Terapeuta del Lenguaje y Estimuladora Infantil. Me apasiona acompañar a cada paciente a su ritmo, convirtiendo cada sesión en un espacio seguro, divertido y lleno de aprendizaje.</p>
+      <p>Trabajo de la mano con las familias, porque los mayores avances se logran cuando todos remamos para el mismo lado. Atiendo en consultorio en Ciudad Quesada y también a domicilio.</p>
+      <div class="datos">
+        <div class="dato"><strong>CTCR-TL-1161</strong><span>Código profesional</span></div>
+        <div class="dato"><strong>Niños y adultos</strong><span>Atención para todas las edades</span></div>
+        <div class="dato"><strong>A domicilio</strong><span>Voy hasta tu casa</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODALIDADES ================= -->
+<section class="seccion modalidades" id="modalidades">
+  <div class="contenedor">
+    <div class="centrado">
+      <span class="etiqueta">Dónde atiendo</span>
+      <h2 class="titulo-seccion">Elegí la modalidad que te quede mejor</h2>
+      <p class="intro-seccion">Ofrezco dos formas de atención para adaptarme a tu familia.</p>
+    </div>
+    <div class="grid-modalidades">
+      <div class="modalidad">
+        <div class="modalidad-icono">📍</div>
+        <div>
+          <h3>En consultorio</h3>
+          <p>Vocal Gym, Centro Comercial Boreal, Ciudad Quesada, San Carlos.</p>
+        </div>
+      </div>
+      <div class="modalidad">
+        <div class="modalidad-icono">🏠</div>
+        <div>
+          <h3>Servicio a domicilio</h3>
+          <p>Llego hasta tu casa para que la terapia sea en un ambiente conocido y cómodo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CÓMO FUNCIONA ================= -->
+<section class="seccion">
+  <div class="contenedor">
+    <div class="centrado">
+      <span class="etiqueta">Cómo funciona</span>
+      <h2 class="titulo-seccion">Empezar es muy sencillo</h2>
+      <p class="intro-seccion">En tres pasos tenemos todo listo para comenzar.</p>
+    </div>
+    <div class="grid-pasos">
+      <div class="paso"><h3>Solicitá tu cita</h3><p>Llená el formulario o escribime por WhatsApp con el día y la hora que te convienen.</p></div>
+      <div class="paso"><h3>Te confirmo</h3><p>Reviso mi agenda y te confirmo el espacio, la modalidad y los detalles de la sesión.</p></div>
+      <div class="paso"><h3>Valoración</h3><p>En la primera sesión conocemos las necesidades y armamos juntos el plan de trabajo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AGENDAR ================= -->
+<section class="seccion agendar" id="agendar">
+  <div class="contenedor">
+    <div>
+      <span class="etiqueta">Agendar</span>
+      <h2 class="titulo-seccion">Reservá tu cita</h2>
+      <p class="intro-seccion" style="margin-bottom:0">Contame un poco y te respondo lo antes posible para confirmar tu espacio.</p>
+      <ul class="lista-check">
+        <li>Atención para niños y adultos mayores</li>
+        <li>Consultorio en Ciudad Quesada o a domicilio</li>
+        <li>Respuesta rápida por WhatsApp</li>
+      </ul>
+    </div>
+
+    <!--
+      Por ahora el formulario arma el mensaje y abre WhatsApp.
+      Cuando conecten Firebase, en la función enviarCita() se guarda en Firestore
+      (ver el comentario TODO más abajo).
+    -->
+    <form class="formulario" id="formCita" novalidate>
+      <div class="campos">
+        <div class="campo">
+          <label for="nombre">Nombre de quien solicita</label>
+          <input id="nombre" name="nombre" required autocomplete="name" placeholder="Ej. María Rodríguez">
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input id="telefono" name="telefono" type="tel" required autocomplete="tel" placeholder="8888 8888">
+        </div>
+        <div class="campo completo">
+          <label for="servicio">Servicio</label>
+          <select id="servicio" name="servicio" required>
+            <option value="">Seleccioná un servicio</option>
+            <option>Terapia del lenguaje para niños</option>
+            <option>Acompañamiento terapéutico para adulto mayor</option>
+            <option>Estimulación temprana</option>
+            <option>Refuerzo en lectura y escritura</option>
+            <option>No estoy seguro/a, quiero orientación</option>
+          </select>
+        </div>
+        <div class="campo completo">
+          <label>Modalidad</label>
+          <div class="opciones">
+            <div class="opcion"><input type="radio" id="mod-consultorio" name="modalidad" value="Consultorio (Vocal Gym)" checked><label for="mod-consultorio">📍 Consultorio</label></div>
+            <div class="opcion"><input type="radio" id="mod-domicilio" name="modalidad" value="A domicilio"><label for="mod-domicilio">🏠 A domicilio</label></div>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="fecha">Fecha preferida</label>
+          <input id="fecha" name="fecha" type="date" required>
+        </div>
+        <div class="campo">
+          <label for="hora">Horario preferido</label>
+          <select id="hora" name="hora" required>
+            <option value="">Seleccioná</option>
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Cualquier horario</option>
+          </select>
+        </div>
+        <div class="campo completo">
+          <label for="comentario">Comentario (opcional)</label>
+          <textarea id="comentario" name="comentario" placeholder="Ej. Edad del niño o niña y algo general que quieras contarme"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-principal">Solicitar cita</button>
+      <p class="nota">La fecha y hora quedan sujetas a confirmación. No incluyas datos médicos detallados; eso lo conversamos en la valoración.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section class="seccion" id="contacto">
+  <div class="contenedor">
+    <div class="centrado">
+      <span class="etiqueta">Contacto</span>
+      <h2 class="titulo-seccion">¡Hablemos!</h2>
+      <p class="intro-seccion">Escribime por cualquiera de estos medios. ¡Será un placer atenderte!</p>
+    </div>
+    <div class="grid-contacto">
+      <div class="info-contacto">
+        <a class="item-contacto" href="https://wa.me/50689638476" target="_blank" rel="noopener">
+          <div class="ic bg-amarillo">📱</div>
+          <div><strong>WhatsApp / Teléfono</strong><span>8963 8476</span></div>
+        </a>
+        <a class="item-contacto" href="mailto:moramendezsheyla@gmail.com">
+          <div class="ic bg-rosa">✉️</div>
+          <div><strong>Correo</strong><span>moramendezsheyla@gmail.com</span></div>
+        </a>
+        <a class="item-contacto" href="https://www.instagram.com/tdellenguajeconshey/" target="_blank" rel="noopener">
+          <div class="ic bg-lila">📸</div>
+          <div><strong>Instagram</strong><span>@tdellenguajeconshey</span></div>
+        </a>
+        <div class="item-contacto">
+          <div class="ic bg-lila">📍</div>
+          <div><strong>Consultorio</strong><span>Vocal Gym, Centro Comercial Boreal, Ciudad Quesada</span></div>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa del consultorio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Centro+Comercial+Boreal,+Ciudad+Quesada,+Costa+Rica&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="contenedor">
+    <strong>Dra. Sheyla Mora Méndez</strong>
+    Terapeuta del Lenguaje y Estimuladora Infantil · Cód. CTCR-TL-1161
+    <div class="redes">
+      <a href="https://www.instagram.com/tdellenguajeconshey/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.1c-.1-1.6-.4-3-1.6-4.2S17.7 1.3 16.1 1.2C14.4 1.1 9.6 1.1 7.9 1.2 6.3 1.3 4.9 1.6 3.7 2.8S2.1 5.4 2 7c-.1 1.7-.1 6.5 0 8.2.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.5.1 8.2 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.2-1.7.2-6.5.1-8.1Zm-2.3 10.3a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.4.4-5.7.4s-4.5.1-5.7-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.4-.4-5.7s-.1-4.5.4-5.7a3.3 3.3 0 0 1 1.9-1.9c1.3-.5 4.4-.4 5.7-.4s4.5-.1 5.7.4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.4.4 5.7s.1 4.5-.4 5.7Z"/></svg>
+      </a>
+      <a href="https://wa.me/50689638476" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.3Z"/></svg>
+      </a>
+    </div>
+    <small>© <span id="anio"></span> Dra. Sheyla Mora Méndez · Ciudad Quesada, San Carlos</small>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="wa-flotante" href="https://wa.me/50689638476?text=Hola%20Dra.%20Sheyla%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.3Z"/></svg>
+</a>
+
+<script>
+  const WHATSAPP = "50689638476";
+
+  // Menú móvil
+  const menuBoton = document.getElementById("menuBoton");
+  const menu = document.getElementById("menu");
+  menuBoton.addEventListener("click", () => {
+    const abierto = menu.classList.toggle("abierto");
+    menuBoton.setAttribute("aria-expanded", abierto);
+  });
+  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    menu.classList.remove("abierto");
+    menuBoton.setAttribute("aria-expanded", "false");
+  }));
+
+  // Año del footer y fecha mínima = hoy
+  document.getElementById("anio").textContent = new Date().getFullYear();
+  const hoy = new Date();
+  hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
+  document.getElementById("fecha").min = hoy.toISOString().split("T")[0];
+
+  // Formulario de cita
+  const form = document.getElementById("formCita");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const datos = Object.fromEntries(new FormData(form));
+    await enviarCita(datos);
+  });
+
+  async function enviarCita(d) {
+    // TODO Firebase: guardar la solicitud en Firestore antes de abrir WhatsApp, p. ej.:
+    // await addDoc(collection(db, "citas"), { ...d, estado: "pendiente", creada: serverTimestamp() });
+
+    const fechaLegible = new Date(d.fecha + "T12:00").toLocaleDateString("es-CR",
+      { weekday: "long", day: "numeric", month: "long" });
+
+    const mensaje =
+      `Hola Dra. Sheyla, quisiera agendar una cita 😊\n\n` +
+      `• Nombre: ${d.nombre}\n` +
+      `• Teléfono: ${d.telefono}\n` +
+      `• Servicio: ${d.servicio}\n` +
+      `• Modalidad: ${d.modalidad}\n` +
+      `• Fecha preferida: ${fechaLegible}\n` +
+      `• Horario: ${d.hora}` +
+      (d.comentario ? `\n• Comentario: ${d.comentario}` : "");
+
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensaje)}`, "_blank");
+  }
+</script>
+</body>
+</html>
